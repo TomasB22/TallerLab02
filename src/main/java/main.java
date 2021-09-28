@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class main {
     public static void main(String[] args) {
-
+        mostrarMenu ();
     }
 
     public static int[] generarArreglo() {
@@ -14,7 +14,7 @@ public class main {
         }
         return Arreglito;
     }
-
+//Metodo menú
     public static void mostrarMenu (){
         System.out.println ("------------------------------------------");
         System.out.println ("1. Mostrar pares adyacentes");
@@ -23,6 +23,7 @@ public class main {
         System.out.println ("------------------------------------------");
         switchesMenuAnalisis();
     }
+    //Switches menu
     public static void switchesMenuAnalisis(){
         int [] Arreglo = generarArreglo();
         boolean salir = true;
@@ -65,7 +66,7 @@ public class main {
             System.out.println ("["+Arr[i-1]+","+Arr[i]+"]");
         }
     }
-
+//Metodo para validar menu.
     public static int validarMenu ( int x) {
         int n = -1;
         do {
