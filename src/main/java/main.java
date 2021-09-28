@@ -2,13 +2,14 @@ import java.util.Scanner;
 
 public class main {
     public static void main(String[] args) {
-
+        mostrarMenu();
     }
 
     public static int[] generarArreglo() {
-        int [] Arreglito = new int[10];
+        int length = (int) (Math.random()*8)+2;
+        int [] Arreglito = new int[length];
         for (int i = 0; i < Arreglito.length; i++) {
-            int nroAleatorio = (int) (Math.random() * 1000) +1;
+            int nroAleatorio = (int) (Math.random() * 2000) -1000;
             Arreglito[i] = nroAleatorio;
             System.out.println ("[" + Arreglito[i] + "]");
         }
