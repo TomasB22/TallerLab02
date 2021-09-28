@@ -1,19 +1,19 @@
-import java.sql.Array;
 import java.util.Scanner;
 
 public class main {
     public static void main(String[] args) {
-
+    mostrarMenu ();
     }
 
-    public static void generarArreglo() {
-        int[] Arreglito = new int[10];
+    public static void generarArreglo(int[] Arreglito ) {
+        Arreglito = new int[10];
         int nroAleatorio = (int) Math.random () * 1000 + 1;
         for (int i = 0; i < Arreglito.length; i++) {
             Arreglito[i] = nroAleatorio;
             System.out.println ("[" + Arreglito[i] + "]");
         }
     }
+
     public static void mostrarMenu (){
         System.out.println ("------------------------------------------");
         System.out.println ("1. Mostrar pares adyacentes");
@@ -22,8 +22,9 @@ public class main {
         System.out.println ("------------------------------------------");
     }
     public static void switchesMenuAnalisis(){
-        switch (validarMenu (4)){
+        switch (validarMenu (3)){
             case 1:
+                mostrarParesAdyacentes();
                 break;
             case 2:
                 break;
@@ -32,6 +33,14 @@ public class main {
                 break;
         }
     }
+
+    private static void mostrarParesAdyacentes(int [] Arr) {
+        System.out.println ("Pares adyacentes :");
+        for(int i = 1; i<Arr.length;i++){
+            System.out.println ("["+Arr[i-1]+","+Arr[i]+"]");
+        }
+    }
+
     public static int validarMenu ( int x) {
         int n = -1;
         do {
