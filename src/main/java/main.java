@@ -7,11 +7,12 @@ public class main {
     }
 
     public static void generarArreglo(){
-        int
-        int Arreglito [] = new Array [];
+        Array[] Arreglito = new Array [10];
 
     }
     public static void llenarArreglo(int Arreglito[]){
+        int nroAleatorio = (int)Math.random()*1000+1;
+
 
     }
 
