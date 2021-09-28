@@ -6,16 +6,14 @@ public class main {
 
     }
 
-    public static void generarArreglo(){
-        Array[] Arreglito = new Array [10];
-
+    public static void generarArreglo() {
+        int[] Arreglito = new int[10];
+        int nroAleatorio = (int) Math.random () * 1000 + 1;
+        for (int i = 0; i < Arreglito.length; i++) {
+            Arreglito[i] = nroAleatorio;
+            System.out.println ("[" + Arreglito[i] + "]");
+        }
     }
-    public static void llenarArreglo(int Arreglito[]){
-        int nroAleatorio = (int)Math.random()*1000+1;
-
-
-    }
-
     public static void mostrarMenu (){
         System.out.println ("------------------------------------------");
         System.out.println ("1. Mostrar pares adyacentes");
