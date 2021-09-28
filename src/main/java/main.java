@@ -2,19 +2,20 @@ import java.util.Scanner;
 
 public class main {
     public static void main(String[] args) {
-        mostrarMenu ();
+        mostrarMenu();
     }
 
     public static int[] generarArreglo() {
-        int [] Arreglito = new int[10];
+        int length = (int) (Math.random()*8)+2;
+        int [] Arreglito = new int[length];
         for (int i = 0; i < Arreglito.length; i++) {
-            int nroAleatorio = (int) (Math.random() * 1000) +1;
+            int nroAleatorio = (int) (Math.random() * 2000) -1000;
             Arreglito[i] = nroAleatorio;
             System.out.println ("[" + Arreglito[i] + "]");
         }
         return Arreglito;
     }
-//Metodo menú
+
     public static void mostrarMenu (){
         System.out.println ("------------------------------------------");
         System.out.println ("1. Mostrar pares adyacentes");
@@ -23,7 +24,6 @@ public class main {
         System.out.println ("------------------------------------------");
         switchesMenuAnalisis();
     }
-    //Switches menu
     public static void switchesMenuAnalisis(){
         int [] Arreglo = generarArreglo();
         boolean salir = true;
@@ -66,7 +66,7 @@ public class main {
             System.out.println ("["+Arr[i-1]+","+Arr[i]+"]");
         }
     }
-//Metodo para validar menu.
+
     public static int validarMenu ( int x) {
         int n = -1;
         do {
@@ -88,3 +88,4 @@ public class main {
 
 
 }
+
